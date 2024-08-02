@@ -15,7 +15,7 @@ This repository provides a step-by-step guide for installing Ollama, setting up 
 - [Build Docker Image with CUDA and cuDNN](#build-docker-image-with-cuda-and-cudnn)
 - [Run Docker Container with NVIDIA GPUs](#run-docker-container-with-nvidia-gpus)
 - [Automatic Container Updates with Watchtower](#automatic-container-updates-with-watchtower)
-- [If you intend to make the Open-WebUi public](Generating-a-public-link-to-access-ollama-via-internet)
+- [If you intend to make the Open-WebUi public](#Generating-a-public-link-to-access-ollama-via-internet)
 ## Installation-Requirements
 
 - Arch Linux (or a compatible distribution)
