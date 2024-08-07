@@ -126,7 +126,7 @@ docker run --gpus all -it --rm   -e NVIDIA_VISIBLE_DEVICES=all   -e NVIDIA_DRIVE
 To enable automatic updates for your Docker containers, use Watchtower:
 
 ```sh
-docker run -d   --name open-webui   --gpus all   --cpus="all"   --restart always   --ulimit memlock=-1:-1   --ulimit stack=67108864:67108864   --shm-size=1g   --memory-swap=-1   -v ollama:/root/.ollama   -v open-webui:/app/backend/data   -p 3000:8080   --label=com.centurylinklabs.watchtower.enable=true   ghcr.io/open-webui/open-webui:ollama
+docker run -d   --name open-webui   --gpus all   --cpus= <- add number of CPU Core ->   --restart always   --ulimit memlock=-1:-1   --ulimit stack=67108864:67108864   --shm-size=1g   --memory-swap=-1   -v ollama:/root/.ollama   -v open-webui:/app/backend/data   -p 3000:8080   --label=com.centurylinklabs.watchtower.enable=true   ghcr.io/open-webui/open-webui:ollama
 ```
 
 ### Setting Up Watchtower
