@@ -84,7 +84,13 @@ curl -fsSL https://ollama.com/install.sh | sh
 To run TensorFlow with GPU support in a Jupyter notebook:
 
 ```sh
-docker run -d --restart unless-stopped --runtime=nvidia   -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888   tensorflow/tensorflow:nightly-gpu-jupyter
+  docker run -d --restart unless-stopped --gpus all \
+        -e NVIDIA_VISIBLE_DEVICES=all \
+        -e TF_FORCE_GPU_ALLOW_GROWTH=true \
+        -v $(realpath ~/notebooks):/tf/notebooks \
+        -p 8888:8888 \
+        tensorflow/tensorflow:2.13.0-gpu-jupyter
+
 ```
 
 ## Build Docker Image with CUDA and cuDNN
